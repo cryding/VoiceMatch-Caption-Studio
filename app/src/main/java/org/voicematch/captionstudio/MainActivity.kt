@@ -135,9 +135,9 @@ class MainActivity : ComponentActivity() {
         words.chunked(6).forEachIndexed { index, chunk ->
             val start = time
             time += maxOf(1200L, chunk.size * 350L)
-            out.append(index + 1).append('\\n')
-            out.append(ts(start)).append(" --> ").append(ts(time)).append('\\n')
-            out.append(chunk.joinToString(" ")).append("\\n\\n")
+            out.append(index + 1).append('\n')
+            out.append(ts(start)).append(" --> ").append(ts(time)).append('\n')
+            out.append(chunk.joinToString(" ")).append("\n\n")
         }
         return out.toString()
     }
